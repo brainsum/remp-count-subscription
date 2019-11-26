@@ -1,0 +1,14 @@
+menu:
+	stats: Subscriptions and subscribers
+	endings: Ending subscriptions
+	my_subscriptions: My subscriptions
+	subscriptions: Subscriptions
+	subscription_types: Subscription types
+	subscriptions_generator: Subscriptions generator
+
+data:
+	subscriptions:
+		fields:
+			articles: Viewed Articles
+		placeholder:
+			articles: "List of articles go here, one on each line"

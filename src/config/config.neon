@@ -1,0 +1,16 @@
+services:
+	moduleManager:
+		setup:
+			- addModule(Crm\CountSubscriptionModule\CountSubscriptionModule())
+
+	- Crm\CountSubscriptionModule\Seeders\CountSubscriptionMethodSeeder
+	- Crm\CountSubscriptionModule\Seeders\ContentAccessSeeder
+	- Crm\CountSubscriptionModule\Api\v1\UsersCustomSubscriptionsHandler
+	- Crm\CountSubscriptionModule\Api\v1\SubsctiptionUpdateOnArticelViewHandler
+	- Crm\CountSubscriptionModule\Presenters\SubscriptionsAdminPresenter
+	- Crm\CountSubscriptionModule\Forms\SubscriptionFormFactory
+
+	lengthMethodFactory:
+		class: Crm\SubscriptionsModule\Length\LengthMethodFactory
+		setup:
+			- registerExtension('article_count', Crm\CountSubscriptionModule\Length\ArticleCountLengthMethod())

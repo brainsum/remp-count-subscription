@@ -1,0 +1,23 @@
+{
+  "name": "brainsum/remp-count-subscription",
+  "description": "REMP Article Count subscription",
+  "type": "library",
+  "homepage": "https://brainsum.com",
+  "license": "MIT",
+  "require": {
+    "php": "^7.2",
+    "ext-soap": "*",
+    "php-http/curl-client": "^1.7",
+    "remp/crm-subscriptions-module": "~0.2 >=0.2.7",
+    "nepada/presenter-mapping": "~1.0"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Crm\\CountSubscriptionModule\\": "src/"
+    },
+    "classmap": [
+      "src/"
+    ]
+  }
+}
