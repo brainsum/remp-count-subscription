@@ -69,7 +69,7 @@ class SubscriptionFormFactory
             $defaults = $subscription->toArray();
         }
 
-        $article_list = unserialize($defaults['articles']);
+        $article_list = isset($defaults['articles']) ? unserialize($defaults['articles']) : [];
 
         $defaults['articles'] = is_array($article_list) ? implode("\n", $article_list) : "";
 
