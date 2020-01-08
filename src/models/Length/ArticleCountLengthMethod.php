@@ -9,7 +9,7 @@ use Crm\SubscriptionsModule\Length\LengthMethodInterface;
 
 class ArticleCountLengthMethod implements LengthMethodInterface
 {
-    public function getEndTime(DateTime $startTime, IRow $user, IRow $subscriptionType, bool $isExtending = false): Length
+    public function getEndTime(DateTime $startTime, IRow $subscriptionType, bool $isExtending): Length
     {
         $length = 999999;
         if ($isExtending && $subscriptionType->extending_length) {
